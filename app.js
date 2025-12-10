@@ -245,12 +245,12 @@ function renderCategoryCards(mainCategories) {
 
       <div style="display:flex; gap:12px; margin-top:8px; align-items:center">
         <div style="flex:1">
-          <div class="big-number" style="color:${cat.annual>=0? 'var(--success)': 'var(--danger)'}">${cat.annual.toFixed(2)}</div>
+          <div class="big-number" style="color:#111827">${cat.annual.toFixed(2)}</div>
           <div class="small">Annual</div>
         </div>
         <div style="width:1px; height:38px; background:#eee"></div>
         <div style="flex:1">
-          <div class="big-number" style="color:${cat.monthly>=0? 'var(--success)': 'var(--danger)'}">${cat.monthly.toFixed(2)}</div>
+          <div class="big-number" style="color:#111827">${cat.monthly.toFixed(2)}</div>
           <div class="small">Monthly</div>
         </div>
       </div>
@@ -552,6 +552,7 @@ renderPie(mainCategories);
 if(annualData.length) renderLineChart(annualData,'annualLineChart','annual-range','annual-range-value');
 if(monthlyData.length) renderLineChart(monthlyData,'monthlyLineChart','monthly-range','monthly-range-value');
 })();
+
 
 
 
