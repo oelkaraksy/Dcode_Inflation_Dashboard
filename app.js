@@ -1,9 +1,9 @@
 // -----------------------------
 //filenames from gethub (place your CSVs in /data/)
 const FILES = {
-  inflationDetails: 'https://raw.githubusercontent.com/hana200000/inflation-data/refs/heads/main/data/October_Inflation_Data.csv',
-  annualHistory: 'https://raw.githubusercontent.com/hana200000/inflation-data/refs/heads/main/data/Annual_Inflation_Historical_Data.csv',
-  monthlyHistory: 'https://raw.githubusercontent.com/hana200000/inflation-data/refs/heads/main/data/Monthly_Inflation_Historical_Data.csv'
+  inflationDetails: 'https://raw.githubusercontent.com/oelkaraksy/Dcode_Inflation_Dashboard/refs/heads/main/November%20Inflation%20Data.csv',
+  annualHistory: 'https://raw.githubusercontent.com/oelkaraksy/Dcode_Inflation_Dashboard/refs/heads/main/Annual%20Inflation%20Historical%20Data.csv',
+  monthlyHistory: 'https://raw.githubusercontent.com/oelkaraksy/Dcode_Inflation_Dashboard/refs/heads/main/Monthly%20Inflation%20Historical%20Data.csv'
 };
 
 
@@ -552,6 +552,7 @@ renderPie(mainCategories);
 if(annualData.length) renderLineChart(annualData,'annualLineChart','annual-range','annual-range-value');
 if(monthlyData.length) renderLineChart(monthlyData,'monthlyLineChart','monthly-range','monthly-range-value');
 })();
+
 
 
 
