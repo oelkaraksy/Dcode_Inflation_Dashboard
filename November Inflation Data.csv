@@ -1,7 +1,7 @@
 ﻿,,Weight,"Annual 
 inflation","Monthly 
 inflation"
-category family,All Items,100,12.3,0.3
+category family,All Items,100,12.3,0.03
 main category 1,FOOD AND NON-ALCOHOLIC BEVERAGES,32.7,0.7,-2.6
 sub category 1.1,Food,31.3,0.4,-2.8
 sub item 1.1,Bread and cereals,3.9,4.6,0.1
@@ -73,3 +73,4 @@ sub item 12,Personal care,0.0,12.9,2.1
 sub item 12,Personal effects,0.0,21.6,0.3
 sub item 12,Insurance,0.0,0.0,0.0
 sub item 12,Other services,0.0,4.0,0.1
+
