@@ -323,4 +323,10 @@ body{
   margin-bottom: 6px;
 }
 
+canvas, svg, .chart-container {
+    -webkit-user-select: none !important;
+    -webkit-touch-callout: none !important;
+    user-select: none !important;
+}
+
 
