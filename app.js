@@ -204,38 +204,38 @@ function renderCategoryCards(mainCategories) {
     if (!cat._originalSubItems) cat._originalSubItems = [...cat.subItems];
 
     // render subitems
-  const renderSubItems = (subItems) => {
-  return subItems.map(sub => {
-    const isSubCategory = /sub category/i.test(sub.type);
-    const bg = isSubCategory ? '#cce4ff' : 'transparent'; 
-    return `
-      <div class="subitem-row" style="display:flex; justify-content:space-between; padding:6px 0; border-top:1px solid #f3f4f6; background-color:${bg}; border-radius:4px;">
-        <div style="flex:1; max-width:70%">${sub.item}</div>
-        <div style="flex:1; display:flex; justify-content:center; gap:40px">
-          <div style="text-align:center">${sub.annual.toFixed(1)}</div>
-          <div style="text-align:center">${sub.monthly.toFixed(1)}</div>
-        </div>
-      </div>
-    `;
-  }).join('');
-};
+//   const renderSubItems = (subItems) => {
+//   return subItems.map(sub => {
+//     const isSubCategory = /sub category/i.test(sub.type);
+//     const bg = isSubCategory ? '#cce4ff' : 'transparent'; 
+//     return `
+//       <div class="subitem-row" style="display:flex; justify-content:space-between; padding:6px 0; border-top:1px solid #f3f4f6; background-color:${bg}; border-radius:4px;">
+//         <div style="flex:1; max-width:70%">${sub.item}</div>
+//         <div style="flex:1; display:flex; justify-content:center; gap:40px">
+//           <div style="text-align:center">${sub.annual.toFixed(1)}</div>
+//           <div style="text-align:center">${sub.monthly.toFixed(1)}</div>
+//         </div>
+//       </div>
+//     `;
+//   }).join('');
+// };
 
-// const renderSubItems = (subItems) => {
-//       return subItems.map(sub => {
-//         const isSubCategory = /sub category/i.test(sub.type);
-//         const bg = isSubCategory ? '#cce4ff' : 'transparent';
-//         const weight = isSubCategory ? '700' : (sub.annual < 0 ? '700' : '400');
-//         return `
-//           <div class="subitem-row" style="display:flex; justify-content:space-between; padding:6px 0; border-top:1px solid #f3f4f6; background-color:${bg}; border-radius:4px;">
-//             <div style="flex:1; max-width:70%">${sub.item}</div>
-//             <div style="flex:1; display:flex; justify-content:center; gap:40px">
-//               <div style="text-align:center; color:${sub.annual < 0 ? 'var(--success)' : 'inherit'}">${sub.annual.toFixed(1)}</div>
-//               <div style="text-align:center; color:${sub.monthly < 0 ? 'var(--success)' : 'inherit'}">${sub.monthly.toFixed(1)}</div>
-//             </div>
-//           </div>
-//         `;
-//       }).join('');
-//     };
+const renderSubItems = (subItems) => {
+      return subItems.map(sub => {
+        const isSubCategory = /sub category/i.test(sub.type);
+        const bg = isSubCategory ? '#cce4ff' : 'transparent';
+        const weight = isSubCategory ? '700' : (sub.annual < 0 ? '700' : '400');
+        return `
+          <div class="subitem-row" style="display:flex; justify-content:space-between; padding:6px 0; border-top:1px solid #f3f4f6; background-color:${bg}; border-radius:4px;">
+            <div style="flex:1; max-width:70%">${sub.item}</div>
+            <div style="flex:1; display:flex; justify-content:center; gap:40px">
+              <div style="text-align:center; color:${sub.annual < 0 ? 'var(--success)' : 'inherit'}">${sub.annual.toFixed(1)}</div>
+              <div style="text-align:center; color:${sub.monthly < 0 ? 'var(--success)' : 'inherit'}">${sub.monthly.toFixed(1)}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    };
 
     el.innerHTML = `
       <div style="display:flex; justify-content:space-between; align-items:center">
@@ -552,6 +552,7 @@ renderPie(mainCategories);
 if(annualData.length) renderLineChart(annualData,'annualLineChart','annual-range','annual-range-value');
 if(monthlyData.length) renderLineChart(monthlyData,'monthlyLineChart','monthly-range','monthly-range-value');
 })();
+
 
 
 
