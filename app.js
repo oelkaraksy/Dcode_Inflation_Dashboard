@@ -332,10 +332,25 @@ const renderSubItems = (subItems) => {
   });
 }
 
+function enableCardTapToggle() {
+  const container = document.getElementById('category-cards');
+  if (!container) return;
 
+  container.addEventListener('click', (e) => {
+    const card = e.target.closest('.category-card');
+    if (!card) return;
 
+    // ignore click on sort arrow
+    if (e.target.closest('.sort-arrow')) return;
 
+    // toggle open class
+    const isOpen = card.classList.toggle('open');
+    card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+}
 
+// call it after rendering cards
+enableCardTapToggle();
 
 function renderPie(mainCategories) {
   const labels = mainCategories.map(c => c.item);
@@ -552,6 +567,7 @@ renderPie(mainCategories);
 if(annualData.length) renderLineChart(annualData,'annualLineChart','annual-range','annual-range-value');
 if(monthlyData.length) renderLineChart(monthlyData,'monthlyLineChart','monthly-range','monthly-range-value');
 })();
+
 
 
 
