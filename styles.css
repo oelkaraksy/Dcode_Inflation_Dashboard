@@ -330,13 +330,14 @@ canvas, svg, .chart-container {
 }
 
 .dashboard-footer {
-  font-size: 6px;
+  font-size: 12px;
   text-align: left;
   color: #777;
   margin-top: 25px;
   margin-bottom: 10px;
   padding-left: 5px;   /* tiny indentation */
 }
+
 
 
 
